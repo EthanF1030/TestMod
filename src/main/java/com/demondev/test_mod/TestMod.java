@@ -1,5 +1,7 @@
 package com.demondev.test_mod;
 
+import com.demondev.test_mod.block.ModBlocks;
+import com.demondev.test_mod.item.ModCreativeModeTabs;
 import com.demondev.test_mod.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -25,9 +27,11 @@ public class TestMod {
 
     public TestMod(IEventBus modEventBus, ModContainer modContainer) {
 
+        ModCreativeModeTabs.register(modEventBus);
         modEventBus.addListener(this::commonSetup);
         NeoForge.EVENT_BUS.register(this);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -36,9 +40,6 @@ public class TestMod {
 
     }
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.TESTER);
-        }
 
     }
     @SubscribeEvent

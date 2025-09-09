@@ -1,3 +1,7 @@
 {
+  "block.test_mod.tester_block": "Tester Block",
+  "block.test_mod.tester_ore": "Tester Ore",
+  "creativetab.test_mod.tester_blocks": "TestMod Blocks",
+  "creativetab.test_mod.tester_items": "TestMod Items",
   "item.test_mod.tester": "Tester"
 }
