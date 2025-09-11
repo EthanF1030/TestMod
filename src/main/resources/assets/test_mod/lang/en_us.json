@@ -1,8 +1,11 @@
 {
   "block.test_mod.tester_block": "Tester Block",
   "block.test_mod.tester_ore": "Tester Ore",
+  "block.test_mod.magic_block": "Magic Block",
   "creativetab.test_mod.tester_blocks": "TestMod Blocks",
   "creativetab.test_mod.tester_items": "TestMod Items",
   "item.test_mod.tester": "Tester",
-  "item.test_mod.chisel": "Chisel"
+  "item.test_mod.chisel": "Chisel",
+  "item.test_mod.diamond_apple": "Diamond Apple",
+  "item.test_mod.radish": "Radish"
 }

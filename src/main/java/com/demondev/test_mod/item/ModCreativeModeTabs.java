@@ -23,6 +23,8 @@ public static final Supplier<CreativeModeTab> TESTER_ITEMS_TAB = CREATIVE_MODE_T
                 .displayItems((itemDisplayParameters, output) -> {
                     output.accept(ModItems.TESTER);
                     output.accept(ModItems.CHISEL);
+                    output.accept(ModItems.RADISH);
+                    output.accept(ModItems.DIAMOND_APPLE);
                 }).build());
 
 public static final Supplier<CreativeModeTab> TESTER_BLOCKS_TAB = CREATIVE_MODE_TAB.register("tester_blocks_tab",
@@ -33,6 +35,7 @@ public static final Supplier<CreativeModeTab> TESTER_BLOCKS_TAB = CREATIVE_MODE_
                 .displayItems((itemDisplayParameters, output) -> {
                     output.accept(ModBlocks.TESTER_BLOCK);
                     output.accept(ModBlocks.TESTER_ORE);
+                    output.accept(ModBlocks.MAGIC_BLOCK);
                 }).build());
 
 
