@@ -22,6 +22,7 @@ public static final Supplier<CreativeModeTab> TESTER_ITEMS_TAB = CREATIVE_MODE_T
                 .title(Component.translatable("creativetab.test_mod.tester_items"))
                 .displayItems((itemDisplayParameters, output) -> {
                     output.accept(ModItems.TESTER);
+                    output.accept(ModItems.CHISEL);
                 }).build());
 
 public static final Supplier<CreativeModeTab> TESTER_BLOCKS_TAB = CREATIVE_MODE_TAB.register("tester_blocks_tab",
