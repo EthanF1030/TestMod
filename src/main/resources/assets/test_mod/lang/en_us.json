@@ -2,12 +2,22 @@
   "block.test_mod.tester_block": "Tester Block",
   "block.test_mod.tester_ore": "Tester Ore",
   "block.test_mod.magic_block": "Magic Block",
+
   "creativetab.test_mod.tester_blocks": "TestMod Blocks",
   "creativetab.test_mod.tester_items": "TestMod Items",
+
   "item.test_mod.tester": "Tester",
   "item.test_mod.chisel": "Chisel",
   "item.test_mod.diamond_apple": "Diamond Apple",
   "item.test_mod.radish": "Radish",
   "item.test_mod.frostfire_ice": "Frostfire Ice",
-  "item.test_mod.starlight_ashes": "Starlight Ashes"
+  "item.test_mod.starlight_ashes": "Starlight Ashes",
+
+  "tooltip.test_mod.magic_block.tooltip": "This block is very §dMAGICAL§r",
+
+  "tooltip.test_mod.chisel.shift_down": "This Item can chisel Blocks into Bricks",
+  "tooltip.test_mod.chisel.tooltip": "Press §eShift§r for more Information",
+
+  "tooltip.test_mod.radish.tooltip": "This is Yummy!"
+
 }

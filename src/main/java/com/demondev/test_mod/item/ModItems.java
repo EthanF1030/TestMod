@@ -3,11 +3,16 @@ package com.demondev.test_mod.item;
 import com.demondev.test_mod.TestMod;
 import com.demondev.test_mod.item.custom.ChiselItem;
 import com.demondev.test_mod.item.custom.FuelItem;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.List;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(TestMod.MOD_ID);
@@ -19,7 +24,13 @@ public class ModItems {
             () -> new ChiselItem(new Item.Properties().durability(32)));
 
     public static final DeferredItem<Item> RADISH = ITEMS.register("radish",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.RADISH)));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.RADISH)){
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("tooltip.test_mod.radish.tooltip"));
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
     public static final DeferredItem<Item> DIAMOND_APPLE = ITEMS.register("diamond_apple",
             () -> new Item(new Item.Properties().food(ModFoodProperties.DIAMOND_APPLE)));
