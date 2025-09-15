@@ -1,6 +1,7 @@
 package com.demondev.test_mod.block.custom;
 
 import com.demondev.test_mod.item.ModItems;
+import com.demondev.test_mod.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
@@ -35,19 +36,16 @@ public class MagicBlock extends Block {
     @Override
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
         if(entity instanceof ItemEntity itemEntity){
-            if(itemEntity.getItem().getItem() == ModItems.TESTER.get()) {
+            if(isValidItem(itemEntity.getItem())) {
                 itemEntity.setItem(new ItemStack(Items.NETHERITE_INGOT, itemEntity.getItem().getCount()));
-            }
-            if(itemEntity.getItem().getItem() == Items.RAW_IRON) {
-                itemEntity.setItem(new ItemStack(Items.IRON_INGOT, itemEntity.getItem().getCount()));
-            }if(itemEntity.getItem().getItem() == Items.RAW_GOLD) {
-                itemEntity.setItem(new ItemStack(Items.GOLD_INGOT, itemEntity.getItem().getCount()));
-            }if(itemEntity.getItem().getItem() == Items.RAW_COPPER) {
-                itemEntity.setItem(new ItemStack(Items.COPPER_INGOT, itemEntity.getItem().getCount()));
             }
         }
 
         super.stepOn(level, pos, state, entity);
+    }
+
+    private boolean isValidItem(ItemStack item) {
+        return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
     @Override
