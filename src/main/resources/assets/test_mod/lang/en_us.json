@@ -7,5 +7,7 @@
   "item.test_mod.tester": "Tester",
   "item.test_mod.chisel": "Chisel",
   "item.test_mod.diamond_apple": "Diamond Apple",
-  "item.test_mod.radish": "Radish"
+  "item.test_mod.radish": "Radish",
+  "item.test_mod.frostfire_ice": "Frostfire Ice",
+  "item.test_mod.starlight_ashes": "Starlight Ashes"
 }

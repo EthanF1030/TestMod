@@ -25,6 +25,8 @@ public static final Supplier<CreativeModeTab> TESTER_ITEMS_TAB = CREATIVE_MODE_T
                     output.accept(ModItems.CHISEL);
                     output.accept(ModItems.RADISH);
                     output.accept(ModItems.DIAMOND_APPLE);
+                    output.accept(ModItems.FROSTFIRE_ICE);
+                    output.accept(ModItems.STARLIGHT_ASHES);
                 }).build());
 
 public static final Supplier<CreativeModeTab> TESTER_BLOCKS_TAB = CREATIVE_MODE_TAB.register("tester_blocks_tab",
