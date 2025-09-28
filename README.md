@@ -1,3 +1,3 @@
 # TestMod 
 
-### This Is literally just a mod for me to learn NeoForge
+### This Is just a mod for me to learn NeoForge
